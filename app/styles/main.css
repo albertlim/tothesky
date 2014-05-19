@@ -2,6 +2,8 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-image: url("/images/candle-reflection2.jpg");
+  background-position: 0px -200px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

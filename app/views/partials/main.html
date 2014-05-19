@@ -1,12 +1,13 @@
 <div ng-include="'partials/navbar'"></div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo <span ng-show="currentUser">{{ currentUser.name }}</span>!</h1>
+<div ng-app="solaceInput" class="jumbotron">
+	<form name="solaceForm" ng-controller="solaceCtrl as sc" ng-submit="sc.addSolace(solace.body)">
+		<textarea ng-model="solace.body" class="form-control" placeholder="Please enter your thoughts" title="Solace"></textarea>
+		<input type="submit" class="btn btn-primary pull-right" value="Add" />
+	</form>
+  <h1><span ng-show="currentUser">{{ currentUser.name }}</span></h1>
   <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
 </div>
 
 <div class="row marketing">

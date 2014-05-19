@@ -4,13 +4,14 @@ angular.module('solaceApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'solaceInput',
   'ngRoute'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'partials/main',
-        controller: 'MainCtrl'
+        controller: 'solaceCtrl'
       })
       .when('/login', {
         templateUrl: 'partials/login',
